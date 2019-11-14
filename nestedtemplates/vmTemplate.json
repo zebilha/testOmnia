@@ -76,7 +76,7 @@
       "type": "Microsoft.Network/networkInterfaces",
       "apiVersion": "2019-07-01",
       "name": "[parameters('networkInterfaceName')]",
-      "location": "[parameters('location')]",
+      "location": "westeurope",
       "dependsOn": [
         "[concat('Microsoft.Network/networkSecurityGroups/', parameters('networkSecurityGroupName'))]",
         "[concat('Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]",
