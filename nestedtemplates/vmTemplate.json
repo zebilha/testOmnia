@@ -64,7 +64,10 @@
     },
     "diagnosticsStorageAccountKind": {
       "type": "String"
-    }
+    },
+	"rgName":{
+		"type": "String"
+	}
   },
   "variables": {
     "nsgId": "[resourceId(resourceGroup().name, 'Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]",
