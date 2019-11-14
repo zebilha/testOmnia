@@ -106,7 +106,7 @@
       "type": "Microsoft.Network/networkSecurityGroups",
       "apiVersion": "2019-02-01",
       "name": "[parameters('networkSecurityGroupName')]",
-      "location": "[parameters('location')]",
+      "location": "westeurope",
       "properties": {
         "securityRules": "[parameters('networkSecurityGroupRules')]"
       }
@@ -115,7 +115,7 @@
       "type": "Microsoft.Network/virtualNetworks",
       "apiVersion": "2019-04-01",
       "name": "[parameters('virtualNetworkName')]",
-      "location": "[parameters('location')]",
+      "location": "westeurope",
       "properties": {
         "addressSpace": {
           "addressPrefixes": "[parameters('addressPrefixes')]"
@@ -127,7 +127,7 @@
       "type": "Microsoft.Network/publicIpAddresses",
       "apiVersion": "2019-02-01",
       "name": "[parameters('publicIpAddressName')]",
-      "location": "[parameters('location')]",
+      "location": "westeurope",
       "sku": {
         "name": "[parameters('publicIpAddressSku')]"
       },
@@ -139,7 +139,7 @@
       "type": "Microsoft.Compute/virtualMachines",
       "apiVersion": "2019-07-01",
       "name": "[parameters('virtualMachineName')]",
-      "location": "[parameters('location')]",
+      "location": "westeurope",
       "dependsOn": [
         "[concat('Microsoft.Network/networkInterfaces/', parameters('networkInterfaceName'))]",
         "[concat('Microsoft.Storage/storageAccounts/', parameters('diagnosticsStorageAccountName'))]"
@@ -186,7 +186,7 @@
       "type": "Microsoft.Storage/storageAccounts",
       "apiVersion": "2019-06-01",
       "name": "[parameters('diagnosticsStorageAccountName')]",
-      "location": "[parameters('location')]",
+      "location": "westeurope",
       "sku": {
         "name": "[parameters('diagnosticsStorageAccountType')]"
       },
