@@ -70,8 +70,8 @@
 	}
   },
   "variables": {
-    "nsgId": "[resourceId(resourceGroup().name, 'Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]",
-    "vnetId": "[resourceId(resourceGroup().name,'Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]",
+    "nsgId": "[resourceId(rgName, 'Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]",
+    "vnetId": "[resourceId(rgName,'Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]",
     "subnetRef": "[concat(variables('vnetId'), '/subnets/', parameters('subnetName'))]"
   },
   "resources": [
@@ -95,7 +95,7 @@
               },
               "privateIPAllocationMethod": "Dynamic",
               "publicIpAddress": {
-                "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/publicIpAddresses', parameters('publicIpAddressName'))]"
+                "id": "[resourceId(rgName, 'Microsoft.Network/publicIpAddresses', parameters('publicIpAddressName'))]"
               }
             }
           }
