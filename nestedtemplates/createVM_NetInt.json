@@ -38,9 +38,9 @@
     "diagnosticsStorageAccountName": {
       "type": "String"
     },
-	"vmPrefix":{
-		"type": "String"
-	}
+    "vmPrefix": {
+      "type": "String"
+    }
   },
   "variables": {},
   "resources": [
@@ -81,7 +81,7 @@
         "storageProfile": {
           "osDisk": {
             "createOption": "fromImage",
-			"name": "[concat(parameters('vmPrefix'), '-gateway-os-vhd')]"
+            "name": "[concat(parameters('vmPrefix'), '-gateway-os-vhd')]"
           },
           "imageReference": {
             "id": "[resourceId('Microsoft.Compute/images', concat(parameters('vmPrefix'), '-gateway-osImage'))]"

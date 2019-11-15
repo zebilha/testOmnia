@@ -45,8 +45,8 @@
     "diagnosticsStorageAccountName": {
       "value": "dtvmimagetestdiag1"
     },
-	"vmPrefix": {
-		"value": "DTVMTestImage2"
-	}
+    "vmPrefix": {
+      "value": "DTVMTestImage2"
+    }
   }
 }
