@@ -26,9 +26,6 @@
     "virtualMachineName": {
       "type": "String"
     },
-    "osDiskType": {
-      "type": "String"
-    },
     "virtualMachineSize": {
       "type": "String"
     },
@@ -40,7 +37,10 @@
     },
     "diagnosticsStorageAccountName": {
       "type": "String"
-    }
+    },
+	"vmPrefix":{
+		"type": "String"
+	}
   },
   "variables": {},
   "resources": [
@@ -81,15 +81,10 @@
         "storageProfile": {
           "osDisk": {
             "createOption": "fromImage",
-            "managedDisk": {
-              "storageAccountType": "[parameters('osDiskType')]"
-            }
+			"name": "[concat(parameters('vmPrefix'), '-gateway-os-vhd')]"
           },
           "imageReference": {
-            "publisher": "Canonical",
-            "offer": "UbuntuServer",
-            "sku": "18.04-LTS",
-            "version": "latest"
+            "id": "[resourceId('Microsoft.Compute/images', concat(parameters('vmPrefix'), '-gateway-osImage'))]"
           }
         },
         "networkProfile": {

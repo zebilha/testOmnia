@@ -33,9 +33,6 @@
     "virtualMachineName": {
       "value": "DTUbuntuVM"
     },
-    "osDiskType": {
-      "value": "Premium_LRS"
-    },
     "virtualMachineSize": {
       "value": "Standard_B1ms"
     },
@@ -47,6 +44,9 @@
     },
     "diagnosticsStorageAccountName": {
       "value": "dtvmimagetestdiag1"
-    }
+    },
+	"vmPrefix": {
+		"value": "DTVMTestImage2"
+	}
   }
 }
