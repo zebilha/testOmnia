@@ -17,39 +17,36 @@
     "virtualNetworkName": {
       "value": "DTVMImageTest987"
     },
-    "value": [
-      "10.0.1.0/24"
-    ]
-  },
-  "subnets": {
-    "value": [
-      {
-        "name": "default",
-        "properties": {
-          "addressPrefix": "10.0.1.0/24"
+    "subnets": {
+      "value": [
+        {
+          "name": "default",
+          "properties": {
+            "addressPrefix": "10.0.1.0/24"
+          }
         }
-      }
-    ]
-  },
-  "publicIpAddressName": {
-    "value": "DTUbuntuVMip"
-  },
-  "virtualMachineName": {
-    "value": "DTUbuntuVM"
-  },
-  "osDiskType": {
-    "value": "Premium_LRS"
-  },
-  "virtualMachineSize": {
-    "value": "Standard_B1ms"
-  },
-  "adminUsername": {
-    "value": "omnia"
-  },
-  "adminPassword": {
-    "value": "Passwordtest1"
-  },
-  "diagnosticsStorageAccountName": {
-    "value": "dtvmimagetestdiag1"
+      ]
+    },
+    "publicIpAddressName": {
+      "value": "DTUbuntuVMip"
+    },
+    "virtualMachineName": {
+      "value": "DTUbuntuVM"
+    },
+    "osDiskType": {
+      "value": "Premium_LRS"
+    },
+    "virtualMachineSize": {
+      "value": "Standard_B1ms"
+    },
+    "adminUsername": {
+      "value": "omnia"
+    },
+    "adminPassword": {
+      "value": "Passwordtest1"
+    },
+    "diagnosticsStorageAccountName": {
+      "value": "dtvmimagetestdiag1"
+    }
   }
 }
