@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "rgName": {
-      "value": "rgtesting765"
+      "value": "dtDefaultUbuntu181119"
     },
     "location": {
       "value": "westeurope"
@@ -47,6 +47,9 @@
     },
     "diagnosticsStorageAccountName": {
       "value": "dtvmimagetestdiag1"
-    }
+    },
+    "networkSecurityGroupName": {
+      "value": "DTUbuntuVM181119-nsg"
+    },
   }
 }

@@ -40,7 +40,14 @@
     },
     "diagnosticsStorageAccountName": {
       "type": "String"
+    },
+    "networkSecurityGroupName": {
+        "type": "String"
+    },
+    "networkSecurityGroupName": {
+        "type": "String"
     }
+
   },
   "variables": {},
   "resources": [
@@ -63,7 +70,10 @@
               }
             }
           }
-        ]
+        ],
+        "networkSecurityGroup": {
+            "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]"
+        }
       }
     },
     {
@@ -102,7 +112,10 @@
         "osProfile": {
           "computerName": "[parameters('virtualMachineName')]",
           "adminUsername": "[parameters('adminUsername')]",
-          "adminPassword": "[parameters('adminPassword')]"
+          "adminPassword": "[parameters('adminPassword')]",
+		  "linuxConfiguration": {
+            "disablePasswordAuthentication": false
+          }
         },
         "diagnosticsProfile": {
           "bootDiagnostics": {
