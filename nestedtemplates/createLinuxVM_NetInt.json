@@ -43,11 +43,7 @@
     },
     "networkSecurityGroupName": {
         "type": "String"
-    },
-    "networkSecurityGroupName": {
-        "type": "String"
     }
-
   },
   "variables": {},
   "resources": [
