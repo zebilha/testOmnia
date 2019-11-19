@@ -119,7 +119,7 @@
             "location": "[resourceGroup().location]",
             "apiVersion": "2019-03-01",
             "dependsOn": [
-                "[variables('deployName')]"
+                "[concat('Microsoft.Compute/virtualMachines/', [parameters('virtualMachineName')])]"
             ],
             "tags": {
                 "displayName": "config-app"
