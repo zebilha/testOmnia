@@ -2,9 +2,6 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "location": {
-      "type": "String"
-    },
     "networkInterfaceName": {
       "type": "String"
     },
@@ -48,7 +45,6 @@
       "type": "Microsoft.Network/networkInterfaces",
       "apiVersion": "2017-06-01",
       "name": "[parameters('networkInterfaceName')]",
-      "location": "[parameters('location')]",
       "properties": {
         "ipConfigurations": [
           {
@@ -73,7 +69,6 @@
       "type": "Microsoft.Compute/virtualMachines",
       "apiVersion": "2019-07-01",
       "name": "[parameters('virtualMachineName')]",
-      "location": "[parameters('location')]",
       "dependsOn": [
         "[resourceId('Microsoft.Network/networkInterfaces/', parameters('networkInterfaceName'))]"
       ],
