@@ -3,16 +3,16 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "networkInterfaceName": {
-      "value": "dtubuntuvm181119"
+      "value": "mvubuntuvm191119"
     },
     "networkSecurityGroupName": {
-      "value": "DTUbuntuVM181119-nsg"
+      "value": "MVUbuntuVM191119-nsg"
     },
     "subnetName": {
       "value": "default"
     },
     "virtualNetworkName": {
-      "value": "DTVMImageTest181119"
+      "value": "MVVMImageTest191119"
     },
     "subnets": {
       "value": [
@@ -25,10 +25,10 @@
       ]
     },
     "publicIpAddressName": {
-      "value": "DTUbuntuVMip181119"
+      "value": "MVUbuntuVMip191119"
     },
     "virtualMachineName": {
-      "value": "DTUbuntuVM181119"
+      "value": "MVUbuntuVM191119"
     },
     "virtualMachineSize": {
       "value": "Standard_B1ms"
@@ -40,7 +40,7 @@
       "value": "ForrestNB_2012#"
     },
     "diagnosticsStorageAccountName": {
-      "value": "dtvmimagetestdiag181119"
+      "value": "mvvmimagetestdiag191119"
     },
     "vmPrefix": {
       "value": "DTVMTestImage2"
