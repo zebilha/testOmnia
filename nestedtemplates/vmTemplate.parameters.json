@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "westeurope"
+    },
+    "networkInterfaceName": {
+      "value": "dtubuntuvm181119"
+    },
+    "networkSecurityGroupName": {
+      "value": "DTUbuntuVM181119-nsg"
+    },
+    "subnetName": {
+      "value": "default"
+    },
+    "virtualNetworkName": {
+      "value": "DTVMImageTest181119"
+    },
+    "subnets": {
+      "value": [
+        {
+          "name": "default",
+          "properties": {
+            "addressPrefix": "10.0.1.0/24"
+          }
+        }
+      ]
+    },
+    "publicIpAddressName": {
+      "value": "DTUbuntuVMip181119"
+    },
+    "virtualMachineName": {
+      "value": "DTUbuntuVM181119"
+    },
+    "virtualMachineSize": {
+      "value": "Standard_B1ms"
+    },
+    "adminUsername": {
+      "value": "omnia"
+    },
+    "adminPassword": {
+      "value": "ForrestNB_2012#"
+    },
+    "diagnosticsStorageAccountName": {
+      "value": "dtvmimagetestdiag181119"
+    },
+    "vmPrefix": {
+      "value": "DTVMTestImage2"
+    }
+  }
+}
