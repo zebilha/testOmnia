@@ -111,7 +111,32 @@
             "storageUri": "[concat('https://', parameters('diagnosticsStorageAccountName'), '.blob.core.windows.net/')]"
           }
         }
-      }
+      },
+	  "resources": [
+		{
+            "name": "config-app",
+            "type": "Extensions",
+            "location": "[resourceGroup().location]",
+            "apiVersion": "2019-03-01",
+            "dependsOn": [
+                "[variables('deployName')]"
+            ],
+            "tags": {
+                "displayName": "config-app"
+            },
+            "properties": {
+                "publisher": "Microsoft.Azure.Extensions",
+                "type": "CustomScriptExtension",
+                "typeHandlerVersion": "2.0",
+                "autoUpgradeMinorVersion": true,
+                "settings": {
+                },
+                "protectedSettings": {
+                    "commandToExecute": "sudo touch test.txt"
+                }
+            }
+        }
+	  ]
     }
   ],
   "outputs": {
