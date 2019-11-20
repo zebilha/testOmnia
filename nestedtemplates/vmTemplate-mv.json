@@ -117,7 +117,7 @@
           "name": "config-app",
           "type": "extensions",
           "location": "[resourceGroup().location]",
-          "apiVersion": "2018-10-01",
+          "apiVersion": "2019-03-01",
           "dependsOn": [
             "[resourceId('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
           ],
