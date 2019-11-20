@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo touch $Home/home/omnia/test.txt
+sudo sed -i 's/SMTP/omnialowcoderocks/g' /home/omnia/config/omnia.json
