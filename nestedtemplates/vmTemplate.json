@@ -110,6 +110,11 @@
             "enabled": true,
             "storageUri": "[concat('https://', parameters('diagnosticsStorageAccountName'), '.blob.core.windows.net/')]"
           }
+        },
+        "upgradePolicy": {
+          "automaticOSUpgradePolicy": {
+            "enableAutomaticOSUpgrade": true
+          }
         }
       },
       "resources": [
