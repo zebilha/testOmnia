@@ -129,13 +129,9 @@
             "type": "CustomScript",
             "typeHandlerVersion": "2.0",
             "autoUpgradeMinorVersion": true,
-            "settings": {
-              "fileUris": [
-               "https://raw.githubusercontent.com/zebilha/testOmnia/master/nestedtemplates/script.sh"
-              ]
-            },
+            "settings": {},
             "protectedSettings": {
-              "commandToExecute": "sudo sh script.sh"
+              "commandToExecute": "sudo sed -i 's/SMTP/omnialowcoderocks/g' /home/omnia/config/omnia.json"
             }
           }
         }
