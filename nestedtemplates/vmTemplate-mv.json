@@ -135,7 +135,7 @@
               ]
             },
             "protectedSettings": {
-              "commandToExecute": "sh script.sh"
+              "commandToExecute": "sudo sh script.sh"
             }
           }
         }
