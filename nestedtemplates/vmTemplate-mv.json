@@ -87,8 +87,7 @@
             "name": "[concat(parameters('vmPrefix'), '-gateway-os-vhd')]"
           },
           "imageReference": {
-            "id": "[resourceId('DTVMImageTest','Microsoft.Compute/images', parameters('vmPrefix'))]",
-            "version": "latest"
+            "id": "[resourceId('DTVMImageTest','Microsoft.Compute/images', parameters('vmPrefix'))]"
           }
         },
         "networkProfile": {
@@ -110,11 +109,6 @@
           "bootDiagnostics": {
             "enabled": true,
             "storageUri": "[concat('https://', parameters('diagnosticsStorageAccountName'), '.blob.core.windows.net/')]"
-          }
-        },
-        "upgradePolicy": {
-          "automaticOSUpgradePolicy": {
-            "enableAutomaticOSUpgrade": true
           }
         }
       },
