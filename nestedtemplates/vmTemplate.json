@@ -39,7 +39,7 @@
       "type": "String"
     },
     "networkSecurityGroupName": {
-        "type": "String"
+      "type": "String"
     }
   },
   "variables": {},
@@ -65,7 +65,7 @@
           }
         ],
         "networkSecurityGroup": {
-			"id": "[resourceId(resourceGroup().name, 'Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]"
+          "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]"
         }
       }
     },
@@ -101,9 +101,9 @@
           "computerName": "[parameters('virtualMachineName')]",
           "adminUsername": "[parameters('adminUsername')]",
           "adminPassword": "[parameters('adminPassword')]",
-		  "linuxConfiguration": {
-			"disablePasswordAuthentication": false
-		  }
+          "linuxConfiguration": {
+            "disablePasswordAuthentication": false
+          }
         },
         "diagnosticsProfile": {
           "bootDiagnostics": {
@@ -112,31 +112,30 @@
           }
         }
       },
-	  "resources": [
-		{
-            "name": "config-app",
-            "type": "Extensions",
-            "location": "[resourceGroup().location]",
-            "apiVersion": "2019-03-01",
-            "dependsOn": [
-				"[resourceId('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
-            ],
-            "tags": {
-                "displayName": "config-app"
-            },
-            "properties": {
-                "publisher": "Microsoft.Azure.Extensions",
-                "type": "CustomScriptExtension",
-                "typeHandlerVersion": "2.0",
-                "autoUpgradeMinorVersion": true,
-                "settings": {
-                },
-                "protectedSettings": {
-                    "commandToExecute": "sudo touch test.txt"
-                }
+      "resources": [
+        {
+          "name": "config-app",
+          "type": "Extensions",
+          "location": "[resourceGroup().location]",
+          "apiVersion": "2019-03-01",
+          "dependsOn": [
+            "[resourceId('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
+          ],
+          "tags": {
+            "displayName": "config-app"
+          },
+          "properties": {
+            "publisher": "Microsoft.Azure.Extensions",
+            "type": "CustomScript",
+            "typeHandlerVersion": "2.0",
+            "autoUpgradeMinorVersion": true,
+            "settings": {},
+            "protectedSettings": {
+              "commandToExecute": "sudo touch test.txt"
             }
+          }
         }
-	  ]
+      ]
     }
   ],
   "outputs": {
