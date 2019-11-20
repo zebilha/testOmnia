@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo touch test.txt
+sudo touch $Home/home/omnia/test.txt
