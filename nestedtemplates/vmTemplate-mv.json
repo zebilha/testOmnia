@@ -131,7 +131,7 @@
             "autoUpgradeMinorVersion": true,
             "settings": {
               "fileUris": [
-                "https://raw.githubusercontent.com/zebilha/testOmnia/master/nestedtemplates/script.sh"
+               "https://raw.githubusercontent.com/zebilha/testOmnia/master/nestedtemplates/script.sh"
               ]
             },
             "protectedSettings": {
