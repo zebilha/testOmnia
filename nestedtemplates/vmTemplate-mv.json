@@ -129,8 +129,13 @@
             "type": "CustomScript",
             "typeHandlerVersion": "2.0",
             "autoUpgradeMinorVersion": true,
+            "settings": {
+              "fileUris": [
+                "https://raw.githubusercontent.com/zebilha/testOmnia/master/nestedtemplates/script.sh"
+              ]
+            },
             "protectedSettings": {
-              "commandToExecute": "sudo touch test.txt"
+              "commandToExecute": "sh script.sh"
             }
           }
         }
