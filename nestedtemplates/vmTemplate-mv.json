@@ -129,7 +129,7 @@
             "type": "CustomScript",
             "typeHandlerVersion": "2.0",
             "autoUpgradeMinorVersion": true,
-            "settings": {
+            "protectedSettings": {
               "commandToExecute": "sudo touch test.txt"
             }
           }
